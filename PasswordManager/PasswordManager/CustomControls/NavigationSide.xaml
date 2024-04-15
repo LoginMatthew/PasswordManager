@@ -1,0 +1,59 @@
+﻿<UserControl x:Class="PasswordManager.CustomControls.NavigationSide"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:converters="clr-namespace:PasswordManager.Converters"
+             xmlns:enum="clr-namespace:PasswordManager.Enums"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800">
+    <UserControl.Resources>
+        <BooleanToVisibilityConverter x:Key="BooleanToVisibilityConverter"/>
+        <BooleanToVisibilityConverter x:Key="BooleanToVisibilityConverter2"/>
+        <converters:RadioButtonConverter x:Key="RadioButtonConverter"/>
+    </UserControl.Resources>
+    
+    <Grid>
+        <StackPanel Orientation="Horizontal">
+            <StackPanel Orientation="Vertical" Width="160">
+                <TextBlock Text="Manager"
+                   Foreground="{StaticResource titleColor}"
+                   FontSize="20"
+                   FontFamily="Montserrat"
+                   FontWeight="Bold"
+                   VerticalAlignment="Center"
+                   Margin="20,20,10,20"/>
+
+                <RadioButton Style="{StaticResource menuButton}"
+                             ToolTip="Dashboard"
+                             Tag="{StaticResource color1}"
+                             IsChecked="{Binding NavigationSide, Converter={StaticResource RadioButtonConverter}, ConverterParameter={x:Static enum:NavigationEnum.Dashboard}, Mode=OneTime}"
+                             Command="{Binding NavigateToDashoardCommand}">
+                    <TextBlock Margin="20,0,0,0" HorizontalAlignment="Center" Text="Dashboard" Style="{StaticResource menuButtonText}"/>
+                </RadioButton>
+                <RadioButton Style="{StaticResource menuButton}"
+                             ToolTip="Passwords and theirs data"
+                             Tag="{StaticResource color2}"
+                             IsChecked="{Binding NavigationSide, Converter={StaticResource RadioButtonConverter}, ConverterParameter={x:Static enum:NavigationEnum.Password}}"
+                             Command="{Binding NavigatePasswordCommand}">
+                    <TextBlock Margin="20,0,0,0" HorizontalAlignment="Center" Text="Password" Style="{StaticResource menuButtonText}"/>
+                </RadioButton>
+                <RadioButton Style="{StaticResource menuButton}"
+                             ToolTip="Settings of the program and where passwords' data are stored and theirs setting"
+                             Tag="{StaticResource color3}"
+                             Command="{Binding NavigateSettingCommand}"
+                             IsChecked="{Binding NavigationSide, Converter={StaticResource RadioButtonConverter}, ConverterParameter={x:Static enum:NavigationEnum.Setting}}">
+                    <TextBlock Margin="20,0,0,0" HorizontalAlignment="Center" Text="Settings" Style="{StaticResource menuButtonText}"/>
+                </RadioButton>
+                <RadioButton Style="{StaticResource menuButton}"
+                             ToolTip="Information about the program"
+                             Tag="{StaticResource color4}"
+                             Command="{Binding NavigateAboutCommand}"
+                             IsChecked="{Binding NavigationSide, Converter={StaticResource RadioButtonConverter}, ConverterParameter={x:Static enum:NavigationEnum.About}}">
+                    <TextBlock Margin="20,0,0,0" HorizontalAlignment="Center" Text="About" Style="{StaticResource menuButtonText}"/>
+                </RadioButton>
+            </StackPanel>
+        </StackPanel>
+    </Grid>
+
+</UserControl>

@@ -1,0 +1,19 @@
+﻿<Application x:Class="PasswordManager.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             Startup="ApplicationStart"
+             Exit="Application_Exit">
+    <Application.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="/Styles/UIColors.xaml"/>
+                <ResourceDictionary Source="/Styles/ControlStyles.xaml"/>
+                <ResourceDictionary Source="/CustomControls/ModalControl/Themes/ModalControlGeneric.xaml"/>
+                <ResourceDictionary Source="/CustomControls/LoadingSpinnerControl/Themes/LoadingSpinnerControlGeneric.xaml"/>
+                <ResourceDictionary Source="/CustomControls/DropdownMenuControl/Themes/DropdownMenuControlGeneric.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+
+
+    </Application.Resources>
+</Application>
