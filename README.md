@@ -4,7 +4,7 @@
 
 The password manager program for storing passwords with encryption on windows.
 
-The program aims to use MVVM architecture and separetes the specific program logic parts and layers. The program has been written in such a way that it is easy to expand or replace the given element and modul unit. The program uses Generic type and reflection and dependencyInjection and hosting.
+The program aims to use MVVM architecture and separates the specific program logic parts and layers and WPF solution project. The program has been written in such a way that it is easy to expand or replace the given element and modul unit. The program uses Generic type and reflection and dependencyInjection and hosting.
 
 The program requires .NET 8.
 
