@@ -30,7 +30,7 @@
                 The program uses Generic type and reflection and dependencyInjection and hosting.
             </TextBox>
             <TextBox TextWrapping="WrapWithOverflow" Margin="0,10,0,0" TextAlignment="Justify" IsReadOnly="True" Background="Transparent" BorderThickness="0">
-                Program version: V0.34
+                Program version: V0.35
             </TextBox>
             <TextBox TextWrapping="WrapWithOverflow" Margin="0,15,0,0" TextAlignment="Justify" IsReadOnly="True" Background="Transparent" BorderThickness="0">
                 The program developed by LoginMatthew © - 2024
