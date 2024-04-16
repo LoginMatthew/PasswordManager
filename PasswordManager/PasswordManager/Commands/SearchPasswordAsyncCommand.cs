@@ -32,7 +32,7 @@ namespace PasswordManager.Commands.AddCommands
             try
             {
                 await passwordListStore.GetAllItem();
-                List<PasswordModel> foundPasswords = passwordListStore.Passwords.Where(x => x.Site.Contains(searchText)).ToList();
+                List<PasswordModel> foundPasswords = passwordListStore.Passwords.Where(x => x.Site.ToUpper().Contains(searchText.ToUpper())).ToList();
 
                 if (foundPasswords != null)
                 {

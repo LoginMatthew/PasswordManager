@@ -119,9 +119,8 @@ namespace PasswordManager.Commands
         /// When PasswordModelView has never been opened before
         /// </summary>
         private async Task PaswordLoad()
-        {            
-            if (passwordListStore.Passwords.Count() <= 0)
-                await passwordListStore.Load();
+        {
+            await passwordListStore.Load();
         }
 
         private async Task UpdateSetting(string text)
